@@ -43,7 +43,7 @@ html {
 
 .container {
     display: grid;
-    grid-template-rows: 7.5rem 40.5rem;
+    grid-template-rows: 7.5rem 40rem;
     margin-bottom: 8rem;
 }
 
@@ -54,7 +54,11 @@ html {
 /*TOPBAR-1*/
 
 .container-topbar{
+    height: 120px;
+    width: 100%;
     z-index: 30;
+    position: absolute;
+    top: 0;
 }
 .topbar{
     justify-content: space-between;
@@ -63,8 +67,8 @@ html {
     height: 120px;
     justify-content: center;
     width: 100%;
-    position: absolute;
-    top: 0;
+    
+    
 }
 
 .container-bar-elements{
@@ -274,12 +278,12 @@ html {
 /*SLIDER*/
 .container-slides{
     grid-row:1;
-    height:48rem;
+    height:47.6rem;
 }
 #container-slider
 {
     width: 100%;
-    height: 48rem;
+    height: 100%;
 }
 /* Tamaño */
 #slider {
