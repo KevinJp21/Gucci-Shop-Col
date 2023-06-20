@@ -74,6 +74,10 @@ html {
     justify-content: space-between;
 }
 
+/*****************************\
+*       RESPONSIVE 1         *
+*******************************/
+
 @media(min-width:1020px){
     .container-1-3 {
         display: flex;
@@ -264,7 +268,10 @@ html {
         display: none;
     } 
 
-    /*SLIDER*/
+    
+}
+
+/*SLIDER*/
 .container-slides{
     grid-row:1;
     height:48rem;
@@ -272,6 +279,7 @@ html {
 #container-slider
 {
     width: 100%;
+    height: 48rem;
 }
 /* Tamaño */
 #slider {
@@ -283,12 +291,13 @@ html {
 }
 #slider li {
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     position: absolute !important;
     top: 0rem !important;
     left: 0 !important;
     width: 100%;
-    height: 48rem;
+    height: 100%;
     display: block;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
@@ -298,8 +307,9 @@ html {
     z-index: -1;
     opacity: 0;
     filter: brightness(.8);
-    
+    clip-path: polygon(0% 0%, 100% 0%, 100% 98.8%, 0% 98.8%);
 }
+
 #container-slider .arrowPrev, #container-slider .arrowNext{
     cursor: pointer;
     width: 8rem;
@@ -317,12 +327,12 @@ html {
 
 #container-slider .arrowNext {
 
-    right: 5rem !important;
+    right: 5% !important;
     
 }
 
 #container-slider .arrowPrev{
-    left: 5rem !important;
+    left: 5% !important;
     
 }
 
@@ -360,7 +370,7 @@ html {
 .item-select-slid {
     background: var(--Gris)  !important;
 }
-}
+
 
 .container-nav-phone{
     display: none;
@@ -370,7 +380,9 @@ html {
     display: none;
 }
 
-/*Diseño TOPBAR para smarphone*/
+/*****************************\
+*       RESPONSIVE 2         *
+*******************************/
 
 @media(max-width:1019px){
 
@@ -419,6 +431,7 @@ html {
     bottom: 2rem;
     left: 1.8rem;
     padding-left: 1rem;
+    
    }
 
     .container-1-3{
@@ -498,7 +511,13 @@ html {
     top: .2rem;
    }
 
-
+    /*Animacion TOPBAR*/
+  
+    .topbar {
+        transition: all .2s ease-in-out;
+        background: linear-gradient(to bottom, #1b1b1b, #e6cfcf00);
+        z-index: 30;
+     }
 
 
 
@@ -547,9 +566,13 @@ html {
     margin-bottom: 20px;
    }
 */
-}
 
-@media screen and (max-width: 460px){
+}
+/*****************************\
+*       RESPONSIVE 3         *
+*******************************/
+
+@media screen and (max-width: 600px){
 	#container-slider .arrowPrev, #container-slider .arrowNext{
 		font-size: 20pt;
 	}
@@ -567,5 +590,255 @@ html {
 		padding: 10px 30px;
     	font-size: 10pt;
 	}
+
+    #container-slider .arrowPrev, #container-slider .arrowNext{
+        cursor: pointer;
+        width: 3rem;
+        height: 5rem;
+        position: absolute;
+        top: 20%;
+        z-index: 30; 
+    }
+
+    .listslider {
+        position: absolute;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 50%;
+        top: 20%;
+        list-style: none;
+        z-index: 30;
+        transform: translateX(-50%);
+    }
+
+    .container-logo img{
+        position: relative;
+        width: 110px;
+        height: 18px;
+        top: 0;
+        right:4vmin;
+    
+    }
+
+    .container-3-3{ 
+        left: -.5rem;
+    }
+
+    .container-bag{
+        width: 30px;
+    }
+
+    .bag-svg{
+    width: 18px;
+    height: 18px;
+    color: var(--Opacity-gray);
+    position: relative;
+    left: .7rem;
+    top: .6rem;
+   }
+
+   .container-3-3 .container-location{
+    width: 30px;
+   }
+
+   .container-3-3 .location-svg{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: .8rem;
+    left: 1rem;
+    color: var(--Opacity-gray);
+   }
+
+   .container-search{
+    width: 30px;
+   }
+   .search-svg{
+    width: 36px;
+    height: 36px;
+    color: var(--Opacity-gray);
+    position: relative;
+    left:  .1rem;
+    top: .2rem;
+   }
+
+   .bars::after{
+    font-size: 18px;
+    bottom: 1.8rem;
+   }
+
+   .bars{
+    top: 1.1rem;
+    left: .4rem;
+   }
+}
+
+/*****************************\
+*       RESPONSIVE 4         *
+*******************************/
+
+@media screen and (max-width: 411px){
+	#container-slider .arrowPrev{
+		left: 15px;
+	}
+	#container-slider .arrowNext{
+		right: 15px !important;
+	}
+	#slider{
+		height: 400px;
+		min-height: 500px;
+	}
+	.btnSlider{
+		padding: 10px 30px;
+    	font-size: 10pt;
+	}
+
+    #container-slider .arrowPrev, #container-slider .arrowNext{
+        cursor: pointer;
+        width: 2.5rem;
+        height: 4rem;
+        position: absolute;
+        top: 20%;
+        z-index: 30; 
+    }
+
+    .listslider {
+        position: absolute;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 50%;
+        top: 20%;
+        list-style: none;
+        z-index: 30;
+        transform: translateX(-50%);
+    }
+
+    .container-logo img{
+        position: relative;
+        width: 100px;
+        height: 16px;
+        top: 0;
+        right:4vmin;
+    
+    }
+
+    .container-3-3{ 
+        left: -.5rem;
+    }
+
+    .container-bag{
+        width: 30px;
+    }
+
+    .bag-svg{
+    width: 18px;
+    height: 18px;
+    color: var(--Opacity-gray);
+    position: relative;
+    left: .7rem;
+    top: .6rem;
+   }
+
+   .container-3-3 .container-location{
+    width: 30px;
+   }
+
+   .container-3-3 .location-svg{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: .8rem;
+    left: 1rem;
+    color: var(--Opacity-gray);
+   }
+
+   .container-search{
+    width: 30px;
+   }
+   .search-svg{
+    width: 36px;
+    height: 36px;
+    color: var(--Opacity-gray);
+    position: relative;
+    left:  .1rem;
+    top: .2rem;
+   }
+
+   .bars::after{
+    font-size: 15px;
+    bottom: 1.7rem;
+    left: 1.4rem;
+   }
+
+   .bars{
+    top: 1.1rem;
+    left: .4rem;
+   }
+
+   .bars .line{
+    width: 20px;
+    height: 1px;
+   }
+}
+/*****************************\
+*       RESPONSIVE 5         *
+*******************************/
+
+@media screen and (max-width: 330px){
+
+    .container-logo img{
+            position: relative;
+            width: 75px;
+            height: 13px;
+            top: 0;
+            right:-4vmin;
+    }
+
+    .container-3-3{ 
+        left: -.5rem;
+    }
+
+
+    .bag-svg{
+    width: 14px;
+    height: 14px;
+    color: var(--Opacity-gray);
+    position: relative;
+    left: 1.5rem;
+    top: .6rem;
+   }
+
+
+   .container-3-3 .location-svg{
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: .6rem;
+    left: 1rem;
+    color: var(--Opacity-gray);
+   }
+
+   .search-svg{
+    width: 30px;
+    height: 30px;
+    color: var(--Opacity-gray);
+    position: relative;
+    left:  .1rem;
+    top: .2rem;
+   }
+
+   .bars::after{
+    font-size: 13px;
+   }
 
 }
