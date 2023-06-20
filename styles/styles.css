@@ -596,24 +596,12 @@ html {
         width: 3rem;
         height: 5rem;
         position: absolute;
-        top: 20%;
+        top: 25%;
         z-index: 30; 
     }
 
     .listslider {
-        position: absolute;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        left: 50%;
-        top: 20%;
-        list-style: none;
-        z-index: 30;
-        transform: translateX(-50%);
+        display: none;
     }
 
     .container-logo img{
@@ -698,29 +686,19 @@ html {
     	font-size: 10pt;
 	}
 
+   
+
     #container-slider .arrowPrev, #container-slider .arrowNext{
         cursor: pointer;
         width: 2.5rem;
         height: 4rem;
         position: absolute;
-        top: 20%;
+        top: 30%;
         z-index: 30; 
     }
 
     .listslider {
-        position: absolute;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        left: 50%;
-        top: 20%;
-        list-style: none;
-        z-index: 30;
-        transform: translateX(-50%);
+        display: none;
     }
 
     .container-logo img{
@@ -790,11 +768,15 @@ html {
     height: 1px;
    }
 }
+
 /*****************************\
 *       RESPONSIVE 5         *
 *******************************/
 
 @media screen and (max-width: 330px){
+    .listslider {
+        display: none;
+    }
 
     .container-logo img{
             position: relative;
@@ -803,6 +785,7 @@ html {
             top: 0;
             right:-4vmin;
     }
+
 
     .container-3-3{ 
         left: -.5rem;
